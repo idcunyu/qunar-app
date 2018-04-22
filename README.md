@@ -1,6 +1,6 @@
 # qunar-app
 
-> Vue-开发去哪儿App去哪儿app哪儿App
+> Vue2.x开发去哪儿App
 
 ## Build Setup
 

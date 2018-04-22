@@ -1,7 +1,7 @@
 {
   "name": "qunar-app",
   "version": "1.0.0",
-  "description": "Vue-开发去哪儿App去哪儿app哪儿App",
+  "description": "Vue-开发去哪儿App",
   "author": "Vernonn",
   "private": true,
   "scripts": {
@@ -11,7 +11,11 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "css-loader": "^0.28.11",
     "fastclick": "^1.0.6",
+    "node-sass": "^4.8.3",
+    "sass-loader": "^7.0.1",
+    "style-loader": "^0.21.0",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1"
   },

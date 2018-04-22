@@ -17,6 +17,7 @@
     "sass-loader": "^7.0.1",
     "style-loader": "^0.21.0",
     "vue": "^2.5.2",
+    "vue-awesome-swiper": "^2.6.7",
     "vue-router": "^3.0.1"
   },
   "devDependencies": {

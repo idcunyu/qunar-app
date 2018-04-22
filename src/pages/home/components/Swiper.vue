@@ -38,7 +38,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.wrapper >>> .swiper-pagination-bullet-active {
+.swiper-pagination-bullet-active {
   background: #fff;
 }
 .wrapper {

@@ -1,7 +1,6 @@
 <template>
   <div class="wrapper">
     <swiper :options="swiperOption">
-      <!-- slides -->
       <swiper-slide v-for = "item of swiperList" :key = "item.id">
         <img class="swiper-img" :src="item.imgUrl">
       </swiper-slide>
@@ -17,7 +16,8 @@ export default {
     return {
       swiperOption: {
         pagination: '.swiper-pagination',
-        loop: true
+        loop: true,
+        autoplay: 3000
       },
       swiperList: [{
         id: '01',
@@ -51,5 +51,4 @@ export default {
     width: 100%;
   }
 }
-
 </style>

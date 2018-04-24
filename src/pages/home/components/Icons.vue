@@ -85,11 +85,11 @@ export default {
 @import "~styles/variable.scss";
 @import "~styles/mixins.scss";
 .icons {
+  background: #fff;
   position: relative;
   overflow: hidden;
   height: 0;
   padding-bottom: 54%;
-  margin-top: .1rem;
   .page {
     margin-bottom: .26rem;
     .icon {

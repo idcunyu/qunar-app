@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="home-page">
     <home-header></home-header>
     <home-swiper></home-swiper>
     <home-icons></home-icons>
@@ -24,4 +24,9 @@ export default {
 }
 </script>
 
-<style></style>
+<style lang="scss">
+@import "~styles/variable.scss";
+.home-page {
+  background: $homeBgColor;
+}
+</style>

@@ -50,6 +50,7 @@ export default {
 .g-choose {
   height: .8rem;
   line-height: .8rem;
+  padding: 0 .1rem;
   background: $bgColor;
   color: #fff;
   margin: 0 auto;
@@ -59,7 +60,7 @@ export default {
     margin: 0 auto;
     display: flex;
     justify-content: center;
-    width: 80%;
+    width: 100%;
     height: .36rem;
     line-height: .36rem;
     font-size: .26rem;

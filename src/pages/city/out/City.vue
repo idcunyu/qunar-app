@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="city-page">
     <city-header></city-header>
     <div class="no-data"><span class="iconfont erroe-icon">&#xe649;</span>暂无数据</div>
   </div>

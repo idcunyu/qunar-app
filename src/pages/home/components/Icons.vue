@@ -1,7 +1,7 @@
 <template>
   <div class="icons">
     <swiper :options="swiperOption">
-      <swiper-slide v-for="(page, index) of pages" :key="index">
+      <swiper-slide class="page" v-for="(page, index) of pages" :key="index">
         <div class="icon" v-for="item of page" :key="item.id">
           <div class="icon-img">
             <img class="icon-img-content" :src="item.imgUrl" alt="icon">
@@ -88,42 +88,49 @@ export default {
   position: relative;
   overflow: hidden;
   height: 0;
-  padding-bottom: 50%;
+  padding-bottom: 54%;
   margin-top: .1rem;
-  .icon {
-    border: none;
-    position: relative;
-    overflow: hidden;
-    float: left;
-    width: 25%;
-    padding-bottom: 25%;
-    height: 0;
-    .icon-img {
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: .44rem;
-      left: 0;
-      box-sizing: border-box;
-      padding: .1rem;
-      .icon-img-content {
+  .page {
+    margin-bottom: .26rem;
+    .icon {
+      border: none;
+      position: relative;
+      overflow: hidden;
+      float: left;
+      width: 25%;
+      padding-bottom: 25%;
+      height: 0;
+      .icon-img {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: .44rem;
+        left: 0;
+        box-sizing: border-box;
+        padding: .1rem;
+        .icon-img-content {
+          display: block;
+          margin: 0 auto;
+          height: 100%;
+        }
+      }
+      .icon-title {
         display: block;
-        margin: 0 auto;
-        height: 100%;
+        position: absolute;
+        text-align: center;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: .44rem;
+        line-height: .44rem;
+        color: $normalTextColor;
+        @include ellipsis;
       }
     }
-    .icon-title {
-      display: block;
-      position: absolute;
-      text-align: center;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      height: .44rem;
-      line-height: .44rem;
-      color: $normalTextColor;
-      @include ellipsis;
-    }
+  }
+  .swiper-pagination {
+    position: absolute;
+    bottom: 0;
   }
 }
 </style>

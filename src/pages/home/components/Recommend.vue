@@ -111,12 +111,12 @@ export default {
         .item-address {
           margin-top: .22rem;
           font-size: .24rem;
-          color: #616161;
+          color: $descTextColor;
           @include ellipsis;
         }
         .item-price {
           margin-top: .26rem;
-          color: #616161;
+          color: $descTextColor;
           .price-icon {
             color: #ff8300;
             vertical-align: bottom;

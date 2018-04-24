@@ -5,6 +5,7 @@
     <home-icons></home-icons>
     <home-recommend></home-recommend>
     <home-weekend></home-weekend>
+    <div class="app-bottom">Qunar Web 触屏版</div>
   </div>
 </template>
 
@@ -31,5 +32,10 @@ export default {
 @import "~styles/variable.scss";
 .home-page {
   background: $homeBgColor;
+}
+.app-bottom {
+  color: $descTextColor;
+  padding: .2rem;
+  text-align: center;
 }
 </style>

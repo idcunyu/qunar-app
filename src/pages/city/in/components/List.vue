@@ -18,7 +18,7 @@
           <div class="city-character-list" v-for="(val, key) of cities" :key="key" :ref="key">
             <div class="title">{{key}}</div>
             <div class="area-city">
-              <div class="city-item border-topbottom" v-for="item of val" :key="item.id">{{item.name}}</div>
+              <div class="city-item border-bottom" v-for="item of val" :key="item.id">{{item.name}}</div>
             </div>
           </div>
         </div>
@@ -98,14 +98,6 @@ export default {
             line-height: .5rem;
             font-size: .26rem;
             padding: .1rem .5rem .1rem .34rem;
-          }
-          .border-topbottom {
-            &:bofore {
-              border-color: #ccc;
-            }
-            &:after {
-              border-color: #ccc;
-            }
           }
         }
       }

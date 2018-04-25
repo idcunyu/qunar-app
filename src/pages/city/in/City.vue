@@ -2,8 +2,16 @@
   <div class="city-page">
     <city-header></city-header>
     <city-search></city-search>
-    <city-list :city="city" :hotCities="hotCities" :cities="cities"></city-list>
-    <city-alphabet :cities="cities"></city-alphabet>
+    <city-list
+      :city="city"
+      :hotCities="hotCities"
+      :cities="cities"
+      :character="character"
+    ></city-list>
+    <city-alphabet
+      :cities="cities"
+      @change="handleCharacterChange"
+    ></city-alphabet>
   </div>
 </template>
 
@@ -26,7 +34,8 @@ export default {
     return {
       city: '未定位',
       hotCities: [],
-      cities: {}
+      cities: {},
+      character: ''
     }
   },
   methods: {
@@ -50,6 +59,9 @@ export default {
         const data = res.data
         this.city = data.city
       }
+    },
+    handleCharacterChange (character) {
+      this.character = character
     }
   },
   mounted () {

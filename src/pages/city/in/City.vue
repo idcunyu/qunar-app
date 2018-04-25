@@ -3,6 +3,7 @@
     <city-header></city-header>
     <city-search></city-search>
     <city-list :city="city" :hotCities="hotCities" :cities="cities"></city-list>
+    <city-alphabet></city-alphabet>
   </div>
 </template>
 
@@ -10,6 +11,7 @@
 import CityHeader from './components/Header'
 import CitySearch from './components/Search'
 import CityList from './components/List'
+import CityAlphabet from './components/Alphabet'
 import axios from 'axios'
 
 export default {
@@ -17,7 +19,8 @@ export default {
   components: {
     CityHeader,
     CitySearch,
-    CityList
+    CityList,
+    CityAlphabet
   },
   data () {
     return {

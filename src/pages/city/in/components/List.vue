@@ -1,23 +1,25 @@
 <template>
-  <div class="list">
-    <div class="area">
-      <div class="title">当前城市</div>
-      <div class="area-city">
-        <div class="city-button location-city">{{this.city}}</div>
+  <div class="list" ref="wrapper">
+    <div>
+      <div class="area">
+        <div class="title">当前城市</div>
+        <div class="area-city">
+          <div class="city-button location-city">{{this.city}}</div>
+        </div>
       </div>
-    </div>
-    <div class="area">
-      <div class="title">热门城市</div>
-      <div class="area-city">
-        <div class="city-button" v-for="city of hotCities" :key="city.id">{{city.name}}</div>
+      <div class="area">
+        <div class="title">热门城市</div>
+        <div class="area-city">
+          <div class="city-button" v-for="city of hotCities" :key="city.id">{{city.name}}</div>
+        </div>
       </div>
-    </div>
-    <div class="area">
-      <div class="cities">
-        <div class="city-character-list" v-for="(val,key) of cities" :key="key">
-          <div class="title">{{key}}</div>
-          <div class="area-city">
-            <div class="city-item border-topbottom" v-for="item of val" :key="item.id">{{item.name}}</div>
+      <div class="area">
+        <div class="cities">
+          <div class="city-character-list" v-for="(val,key) of cities" :key="key">
+            <div class="title">{{key}}</div>
+            <div class="area-city">
+              <div class="city-item border-topbottom" v-for="item of val" :key="item.id">{{item.name}}</div>
+            </div>
           </div>
         </div>
       </div>
@@ -26,12 +28,17 @@
 </template>
 
 <script>
+import BScroll from 'better-scroll'
+
 export default {
   name: 'CityList',
   props: {
     city: String,
     hotCities: Array,
     cities: Object
+  },
+  mounted () {
+    this.scroll = new BScroll(this.$refs.wrapper)
   }
 }
 </script>
@@ -40,6 +47,12 @@ export default {
 @import "~styles/variable.scss";
 
 .list {
+  overflow: hidden;
+  position: absolute;
+  top: 2.22rem;
+  left: 0;
+  right: 0;
+  bottom: 0;
   .area {
     .title {
       height:.24rem;
@@ -54,7 +67,6 @@ export default {
       .location-city {
         background: $bgColor;
         color: #fff;
-        // border-color: #fff!important;
       }
       .city-button {
         float: left;

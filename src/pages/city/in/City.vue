@@ -3,7 +3,6 @@
     <city-header></city-header>
     <city-search :cities="cities"></city-search>
     <city-list
-      :city="city"
       :hotCities="hotCities"
       :cities="cities"
       :character="character"
@@ -32,7 +31,6 @@ export default {
   },
   data () {
     return {
-      city: '未定位',
       hotCities: [],
       cities: {},
       character: ''
@@ -42,8 +40,6 @@ export default {
     getCityInfo () {
       axios.get('/api/city.json')
         .then(this.getCityInfoSuccess)
-      axios.get('/api/index.json')
-        .then(this.getIndexInfoSuccess)
     },
     getCityInfoSuccess (res) {
       res = res.data
@@ -51,13 +47,6 @@ export default {
         const data = res.data
         this.hotCities = data.hotCities
         this.cities = data.cities
-      }
-    },
-    getIndexInfoSuccess (res) {
-      res = res.data
-      if (res.ret && res.data) {
-        const data = res.data
-        this.city = data.city
       }
     },
     handleCharacterChange (character) {

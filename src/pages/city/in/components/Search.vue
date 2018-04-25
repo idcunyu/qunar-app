@@ -5,7 +5,7 @@
     </div>
     <div class="search-content" v-show="this.keyword" ref="search">
       <ul>
-        <li class="city-item border-bottom" v-for="item of list" :key="item.id">
+        <li class="city-item border-bottom" v-for="item of list" :key="item.id" @click="handleCityClick(item.name)">
           {{item.name}}
         </li>
         <li class="city-item border-bottom" v-show="noCityList">
@@ -35,6 +35,12 @@ export default {
   computed: {
     noCityList () {
       return !this.list.length
+    }
+  },
+  methods: {
+    handleCityClick (city) {
+      this.$store.commit('changeCity', city)
+      this.$router.push('/')
     }
   },
   watch: {

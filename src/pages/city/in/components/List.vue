@@ -4,13 +4,17 @@
       <div class="area">
         <div class="title">当前城市</div>
         <div class="area-city">
-          <div class="city-button location-city">{{this.city}}</div>
+          <div class="city-button location-city" @click="handleCityClick()">
+            {{this.$store.state.city}}
+          </div>
         </div>
       </div>
       <div class="area">
         <div class="title">热门城市</div>
         <div class="area-city">
-          <div class="city-button" v-for="city of hotCities" :key="city.id">{{city.name}}</div>
+          <div class="city-button" v-for="city of hotCities" :key="city.id" @click="handleCityClick(city.name)">
+            {{city.name}}
+          </div>
         </div>
       </div>
       <div class="area">
@@ -18,7 +22,9 @@
           <div class="city-character-list" v-for="(val, key) of cities" :key="key" :ref="key">
             <div class="title">{{key}}</div>
             <div class="area-city">
-              <div class="city-item border-bottom" v-for="item of val" :key="item.id">{{item.name}}</div>
+              <div class="city-item border-bottom" v-for="item of val" :key="item.id" @click="handleCityClick(item.name)">
+                {{item.name}}
+              </div>
             </div>
           </div>
         </div>
@@ -33,13 +39,20 @@ import BScroll from 'better-scroll'
 export default {
   name: 'CityList',
   props: {
-    city: String,
     hotCities: Array,
     cities: Object,
     character: String
   },
   mounted () {
     this.scroll = new BScroll(this.$refs.wrapper)
+  },
+  methods: {
+    handleCityClick (city) {
+      if (city) {
+        this.$store.commit('changeCity', city)
+      }
+      this.$router.push('/')
+    }
   },
   watch: {
     character () {

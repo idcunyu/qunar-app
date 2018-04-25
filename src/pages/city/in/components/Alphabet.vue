@@ -31,8 +31,14 @@ export default {
   },
   data () {
     return {
-      touchStatus: false
+      touchStatus: false,
+      startY: 0,
+      timer: null
     }
+  },
+  updated () {
+    // 性能提升 - 数据更新时获取startY
+    this.startY = this.$refs['A'][0].offsetTop
   },
   methods: {
     handleCharacterClick (e) {
@@ -43,12 +49,17 @@ export default {
     },
     handleTouchMove (e) {
       if (this.touchStatus) {
-        const startY = this.$refs['A'][0].offsetTop
-        const touchY = e.touches[0].clientY - 74
-        const index = Math.floor((touchY - startY) / 20)
-        if (index >= 0 && index < this.characters.length) {
-          this.$emit('change', this.characters[index])
+        // 性能提升 - 函数截留
+        if (this.timer) {
+          clearTimeout(this.timer)
         }
+        this.timer = setTimeout(() => {
+          const touchY = e.touches[0].clientY - 74
+          const index = Math.floor((touchY - this.startY) / 20)
+          if (index >= 0 && index < this.characters.length) {
+            this.$emit('change', this.characters[index])
+          }
+        }, 16)
       }
     },
     handleTouchEnd () {

@@ -5,7 +5,13 @@
       <span class="header-title">猜你喜欢</span>
     </div>
     <ul class="recommend-list">
-      <li class="recommend-item" v-for="item of list" :key="item.id">
+      <router-link
+        :to="'/detail/' + item.id"
+        tag="li"
+        class="recommend-item border-top"
+        v-for="item of list"
+        :key="item.id"
+      >
         <img class="item-img" :src="item.imgUrl" alt="景点">
         <div class="item-info">
           <p class="item-title">{{item.title}}</p>
@@ -15,7 +21,7 @@
           </p>
         </div>
         <button class="item-more">查看详情</button>
-      </li>
+      </router-link>
     </ul>
   </div>
 </template>

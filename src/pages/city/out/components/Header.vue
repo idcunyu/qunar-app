@@ -3,7 +3,7 @@
     <div class="header">
       <router-link to="/">
         <div class="header-left">
-          <span class="iconfont back-icon">&#xe697;</span>
+          <span class="iconfont back-icon">&#xe61f;</span>
         </div>
       </router-link>
       <div class="header-title">城市选择</div>

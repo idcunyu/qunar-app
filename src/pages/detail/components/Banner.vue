@@ -43,7 +43,6 @@ export default {
 
 <style lang="scss" scoped>
 @import "~styles/variable.scss";
-@import "~styles/mixins.scss";
 
 .banner {
   position: relative;

@@ -11,7 +11,6 @@
       </router-link>
       <div class="header-fixed-title">描述</div>
     </div>
-    <div class="content"></div>
   </div>
 </template>
 
@@ -67,6 +66,7 @@ export default {
   text-align: center;
 }
 .header-fixed {
+  z-index: 2;
   position: fixed;
   top: 0;
   right: 0;
@@ -86,8 +86,5 @@ export default {
   .header-fixed-title {
     margin: 0 1rem;
   }
-}
-.content {
-  height: 50rem;
 }
 </style>

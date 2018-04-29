@@ -1,3 +1,4 @@
+<!-- 主页 -->
 <template>
   <div class="home-page">
     <home-header></home-header>

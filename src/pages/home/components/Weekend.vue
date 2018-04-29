@@ -1,3 +1,4 @@
+<!-- 主页推荐(周末去哪儿)组件 -->
 <template>
   <div class="weekend">
     <div class="weekend-header">周末去哪儿</div>

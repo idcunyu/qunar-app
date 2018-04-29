@@ -1,3 +1,4 @@
+<!-- 首页banner轮播组件 -->
 <template>
   <div class="wrapper">
     <swiper :options="swiperOption" v-if="list.length">

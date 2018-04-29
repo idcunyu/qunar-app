@@ -1,21 +1,25 @@
-# qunar-app
+Vue2.x+webpack+vue-router+vuex 开发 去哪儿网WebApp
+=======
+# 去哪儿网 - WebApp
 
-> Vue2.x开发去哪儿App
+## <i class="icon-list"></i> 本页索引
 
-## Build Setup
+* [快速运行](#快速运行)
+* [项目介绍](#项目介绍)
 
-``` bash
-# install dependencies
-npm install
+## 快速运行
 
-# serve with hot reload at localhost:8080
-npm run dev
+> https://github.com/vernonn/qunar-app
 
-# build for production with minification
-npm run build
+立即查看运行:
 
-# build for production and view the bundle analyzer report
-npm run build --report
-```
+* 在github上下载并解压此项目 或 将此项目clone你选择的路径下。
+* 在项目的根目录下，执行 `npm install` 下载项目依赖（可打开package.JSON文件查看所需模块）。
+* 同样，在项目的根目录下，执行 `npm run start`，在网址栏输入`http://localhost:8080/`。
+* 在电脑端，项目WebApp打开后，请检查元素(F12)后再刷新查看。
+* 提示：如npm下载依赖速度过慢，请使用淘宝NPM镜像。
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+## 项目介绍
+
+![image](./localpic/qunar01.png)
+

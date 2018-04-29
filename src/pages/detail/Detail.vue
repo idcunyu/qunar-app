@@ -1,3 +1,4 @@
+<!-- 景点详情页 -->
 <template>
   <div class="datail-page">
     <detail-banner></detail-banner>

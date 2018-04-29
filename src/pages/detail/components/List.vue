@@ -1,3 +1,4 @@
+<!-- 景点页票类票价详情组件 -->
 <template>
   <div class="list">
     123

@@ -1,3 +1,4 @@
+<!-- 主页推荐(猜你喜欢)组件 -->
 <template>
   <div class="recommend">
     <div class="recommend-header">

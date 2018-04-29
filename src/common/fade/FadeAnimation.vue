@@ -1,3 +1,4 @@
+<!-- 渐隐渐现动画组件 -->
 <template>
   <transition name="fade">
     <slot></slot>
@@ -6,7 +7,7 @@
 
 <script>
 export default {
-  name: 'CommonFade'
+  name: 'FadeAnimation'
 }
 </script>
 
@@ -17,7 +18,6 @@ export default {
   opacity: 0;
 }
 .fade-enter-active, .fade-leave-active {
-  opacity: .5;
   transition: opacity .5s;
 }
 </style>

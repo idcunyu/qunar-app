@@ -1,3 +1,4 @@
+<!-- 右侧字母方式查看城市组件 -->
 <template>
   <ul class="list">
     <li class="item"

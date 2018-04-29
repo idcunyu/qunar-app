@@ -1,3 +1,4 @@
+<!-- 主页图标选择组件 -->
 <template>
   <div class="icons">
     <swiper :options="swiperOption">

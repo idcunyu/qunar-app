@@ -25,6 +25,7 @@ export default new Router({
     name: 'Detail',
     component: Detail
   }],
+  // 打开新页面从顶部开始显示
   scrollBehavior (to, from, savedPosition) {
     return { x: 0, y: 0 }
   }

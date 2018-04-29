@@ -9,7 +9,7 @@
           <span class="iconfont back-icon">&#xe61f;</span>
         </div>
       </router-link>
-      <div class="header-fixed-title">描述</div>
+      <div class="header-fixed-title">{{sightName}}</div>
     </div>
   </div>
 </template>
@@ -24,6 +24,9 @@ export default {
         opacity: 0
       }
     }
+  },
+  props: {
+    sightName: String
   },
   methods: {
     handleScroll () {
@@ -51,7 +54,6 @@ export default {
 
 <style lang="scss" scoped>
 @import "~styles/variable.scss";
-@import "~styles/mixins.scss";
 
 .header-top {
   position: absolute;

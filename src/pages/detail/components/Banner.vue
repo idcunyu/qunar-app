@@ -2,20 +2,20 @@
 <template>
   <div>
     <div class="banner" @click="handleBannerClick">
-      <img class="banner-img" src="http://img1.qunarzz.com/sight/p0/1505/be/be4802e10f3b3107.water.jpg_600x330_9eb9410c.jpg" alt="banner-slide">
+      <img class="banner-img" :src="bannerImg" alt="banner-slide">
       <div class="banner-info">
         <div class="banner-number">
-          <span class="iconfont photo-icon">&#xe872;</span>4
+          <span class="iconfont photo-icon">&#xe872;&nbsp;</span><span class="photo-number">{{gallaryImgs.length}}</span>
         </div>
         <div class="banner-title">
-          武隆天坑地缝国家地质公园(AAAAA景区)
+          {{sightName}}
           <span class="iconfont arrow-icon">&#xe62d;</span>
         </div>
       </div>
     </div>
     <fade-animation>
       <common-gallary
-        :imgs="imgs"
+        :gallaryImgs="gallaryImgs"
         v-show="showGallary"
         @close="handleGallaryClose"
       ></common-gallary>
@@ -31,9 +31,13 @@ export default {
   name: 'DetailBanner',
   data () {
     return {
-      imgs: ['http://img1.qunarzz.com/sight/p0/1505/be/be4802e10f3b3107.water.jpg_350x240_40073ef0.jpg', 'http://img1.qunarzz.com/sight/p0/201401/17/72e8ef351fc2129b8e1911fc9d8a6fc3.jpg_350x240_b33f4023.jpg'],
       showGallary: false
     }
+  },
+  props: {
+    sightName: String,
+    bannerImg: String,
+    gallaryImgs: Array
   },
   methods: {
     handleBannerClick () {
@@ -52,6 +56,7 @@ export default {
 
 <style lang="scss" scoped>
 @import "~styles/variable.scss";
+@import "~styles/mixins.scss";
 
 .banner {
   position: relative;
@@ -77,20 +82,31 @@ export default {
       flex: 1;
       font-size: .3rem;
       padding: 0 .2rem;
+      @include ellipsis;
       .arrow-icon {
         float: right;
       }
     }
     .banner-number {
-      text-align: center;
       width: .4rem;
       height: .34rem;
+      line-height: .34rem;
       padding: 0 .4rem;
       margin: 0 0 .06rem .2rem;
       line-height: .34rem;
       font-size: .24rem;
       border-radius: .2rem;
       background: rgba(0, 0, 0, .6);
+      display: flex;
+      justify-content: center;
+      .photo-icon {
+        // display: inline-block;
+        line-height: .34rem;
+      }
+      .photo-number {
+        font-size: .24rem;
+        margin-top: .02rem;
+      }
     }
   }
 }

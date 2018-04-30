@@ -3,14 +3,14 @@
   <div class="header-left">
     <span class="iconfont back-icon">&#xe61f;</span>
   </div>
-  <div class="header-input">
-    <span class="iconfont">&#xe693;</span>
-    输入城市/景点/游玩主题
+  <div class="iconfont header-input">
+    <span class="iconfont search-icon">&#xe693;</span>
+    <input class="header-input-in" placeholder="输入城市/景点/游玩主题" />
   </div>
   <router-link to='/city/in'>
     <div class="header-right">
       {{this.city}}
-      <span class="iconfont arrow-item">&#xe6dc;</span>
+      <span class="iconfont arrow-icon">&#xe6dc;</span>
     </div>
   </router-link>
  </div>
@@ -43,15 +43,28 @@ export default {
     }
   }
   .header-input {
+    display: inline-block;
+    position: relative;
     flex: 1;
     height:.64rem;
     line-height: .64rem;
     margin-top: .12rem;
     margin-left: .2rem;
-    padding-left: .2rem;
+    padding-right: .2rem;
+    padding-left: .5rem;
     border-radius: .1rem;
     background: #fff;
-    color: #ccc;
+    .search-icon {
+      position: absolute;
+      left: .1rem;
+      color: #aaa;
+    }
+    .header-input-in {
+      width: 100%;
+      font-size: .26rem;
+      color: #aaa;
+      font-family: "微软雅黑";
+    }
   }
   .header-right{
     min-width: 1.04rem;
@@ -59,7 +72,7 @@ export default {
     float: right;
     text-align: center;
     color: #fff;
-    .arrow-item{
+    .arrow-icon{
       margin-left:-.04rem;
       font-size: .23rem;
     }

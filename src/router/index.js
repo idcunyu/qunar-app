@@ -1,9 +1,5 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from '@/pages/home/Home'
-import CityIn from '@/pages/city/in/City'
-import CityOut from '@/pages/city/out/City'
-import Detail from '@/pages/detail/Detail'
 
 Vue.use(Router)
 
@@ -11,19 +7,19 @@ export default new Router({
   routes: [{
     path: '/',
     name: 'Home',
-    component: Home
+    component: () => import('@/pages/home/Home')
   }, {
     path: '/city/in',
     name: 'CityIn',
-    component: CityIn
+    component: () => import('@/pages/city/in/City')
   }, {
     path: '/city/out',
     name: 'CityOut',
-    component: CityOut
+    component: () => import('@/pages/city/out/City')
   }, {
     path: '/detail/:id',
     name: 'Detail',
-    component: Detail
+    component: () => import('@/pages/detail/Detail')
   }],
   // 打开新页面从顶部开始显示
   scrollBehavior (to, from, savedPosition) {

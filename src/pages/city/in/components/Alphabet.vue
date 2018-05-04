@@ -6,7 +6,7 @@
     :key="item"
     :ref="item"
     @click="handleCharacterClick"
-    @touchstart="handleTouchStart"
+    @touchstart.prevent="handleTouchStart"
     @touchmove="handleTouchMove"
     @touchend="handleTouchEnd"
     >
@@ -55,7 +55,7 @@ export default {
           clearTimeout(this.timer)
         }
         this.timer = setTimeout(() => {
-          const touchY = e.touches[0].clientY - 74
+          const touchY = e.touches[0].clientY - 100
           const index = Math.floor((touchY - this.startY) / 20)
           if (index >= 0 && index < this.characters.length) {
             this.$emit('change', this.characters[index])
@@ -79,7 +79,7 @@ export default {
   justify-content: center;
   text-align: center;
   position: absolute;
-  top: 1.58rem;
+  top: 2rem;
   bottom: 0;
   right: 0;
   width: .4rem;

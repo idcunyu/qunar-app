@@ -16,8 +16,8 @@ Vue2.x+webpack+vue-router+vuex 开发 去哪儿网WebApp
 
 - 在github上下载并解压此项目 或 将此项目clone你选择的路径下。
 - 在项目的根目录下，执行 `npm install` 下载项目依赖（可打开package.JSON文件查看所需模块）。
-- 同样，在项目的根目录下，执行 `npm run start`，在网址栏输入`http://localhost:8080/`。
-- 在电脑端，项目WebApp打开后，请检查元素(F12)后再刷新查看。
+- 同样，在项目的根目录下，执行 `npm run start`，在网址栏输入`http://localhost:8080/`，如果要在移动设备端查看，在命令行输入`ipconfig`查询IP地址，然后再电脑端或者使用着与电脑端相同网络连接的移动设备端浏览`你的ip地址:8080`(**例如**：`192.168.1.105:8080`)即可。
+- 在电脑端，以Chrome浏览器为例，项目WebApp打开后，请检查元素(F12或CTRL+SHIFT+I)后，再切换设备分辨率(CTRL+SHIFT+M)，最后刷新便可正常浏览。
 - 提示：如npm下载依赖速度过慢，请使用淘宝NPM镜像。
 
 ## 环境参数

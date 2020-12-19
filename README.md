@@ -1,4 +1,4 @@
-Vue2.x+webpack+vue-router+vuex 开发 去哪儿网WebApp
+Vue+webpack+vue-router+vuex 开发 去哪儿网WebApp
 =======
 # 去哪儿网 - WebApp
 
